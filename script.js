@@ -3,7 +3,7 @@
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-
+/*
 const weekdays = ['mon', 'tue', 'wed'];
 const openingHours = {
   [weekdays[1]]: {
@@ -84,7 +84,7 @@ console.log(users[0]?.name ?? 'User arry is empty');
 //   adress: 'Przejazdowa 2552',
 //   starterIndex: 2,
 // });
-
+/*
 const rest1 = {
   name: 'Capri',
   // numGuests: 20,
@@ -290,7 +290,7 @@ const [a = 1, b = 1, c = 1] = [8, 9];
 console.log(a, b, c);
 
 */
-
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -392,7 +392,7 @@ for (const name of game.scored) {
 // check('humels');
 // check('lewandowski');
 console.log(scorers);
-
+*/
 // for (const [name, value] of )
 /*
 // const players = [...game.players];
@@ -462,3 +462,242 @@ for (const [day, { open, close }] of entries) {
   console.log(`At ${day} we are opening at ${open}, and close at ${close}`);
 }
 */
+/*
+console.log('----------------');
+
+const newSet = new Set(['Pizza', 'Pasta', 'Bread', 'Pizza', 'Risotto']);
+
+console.log(newSet);
+console.log(newSet.size);
+console.log(newSet.add('Drink'));
+console.log(newSet.has('Pizza'));
+
+for (const order of newSet) {
+  console.log(order);
+}
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
+
+const staffSet = new Set(staff);
+console.log(staffSet);
+
+// const uniqueStaffArry = [];
+// for (const unique of staffSet) {
+//   uniqueStaffArry.push(unique);
+// }
+// console.log(uniqueStaffArry);
+
+const newUnique = [...new Set(staff)];
+console.log(newUnique);
+*/
+/*
+const newMap = new Map();
+
+newMap.set('name', 'Classic Name');
+newMap.set('loc1', 'Raciborz');
+newMap.set('loc2', 'Kietrz');
+newMap.set('open', 11);
+newMap.set('close', 22);
+newMap.set(true, 'We are open');
+newMap.set(false, 'We are closed');
+
+const time = 20;
+console.log(newMap.get('open'));
+
+console.log(
+  newMap.get(time >= newMap.get('open') && time <= newMap.get('close'))
+);
+
+const arr = [1, 2];
+newMap.set(arr, 'test');
+console.log(newMap.get(arr));
+
+const question = new Map([
+  ['question', 'What is the best programming language?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct!!!'],
+  [false, 'Try again!'],
+]);
+
+//Convert object to map:
+console.log(question);
+console.log(openingHours);
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+// let answer = Number(prompt('Your answer?'));
+let answer = 3;
+console.log(question.get(answer === question.get('correct')));
+
+// answer === question.get('correct')
+//   ? console.log(question.get(true))
+//   : (answer = Number(prompt('Your answer?')));
+
+console.log(question.entries());
+console.log(question.keys());
+console.log(question.values());
+console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+*/
+
+/*
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+//1. Task:
+const deleteDuplicate = new Set();
+
+const nonDuplicateSet = [...new Set(gameEvents.values())];
+console.log(nonDuplicateSet);
+// console.log(nonDuplicateSet);
+// console.log(nonDuplicateSet.keys());
+for (const [minute, event] of gameEvents) {
+  console.log(minute, event);
+  deleteDuplicate.add(event);
+}
+
+const events = [...deleteDuplicate];
+console.log(events);
+
+//2. Delete one event:
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// const events = [...gameEvents];
+// console.log(events);
+
+// 3. average of events during 90minutes of game
+const timeGame = 90;
+console.log(
+  `An event happend, on average every ${timeGame / gameEvents.size} minutes`
+);
+
+//4. Which half is?
+for (const [min, event] of gameEvents) {
+  min <= 45
+    ? console.log(`[FIRST HALF] ${min}: ${event}`)
+    : console.log(`[SECOND HALF] ${min}: ${event}`);
+}
+
+// if (x>45) { 'FIRST HALF' x: GOAL!};
+*/
+
+//TODO: Work with strings
+
+const airLine = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airLine.length);
+console.log('B737'.length);
+
+console.log(airLine.indexOf('r')); // Position from front
+console.log(airLine.lastIndexOf('r')); // Position from back
+
+console.log(airLine.indexOf('Portugal')); //Point of starting a position of Portugal string
+console.log(airLine.slice(4)); // Make substring from position 4,
+console.log(airLine.slice(4, 7)); // Make substring from position 4, and end of before 7
+
+console.log(airLine.slice(0, airLine.indexOf(' ')));
+console.log(airLine.slice(airLine.lastIndexOf(' ') + 1));
+
+console.log(airLine.slice(-2)); // log last 2 positions
+console.log(airLine.slice(1, -5)); // start from 1 pos, and stop 5 pos before end
+
+// FIND A LAST LETTER:
+const checkMiddleSeat = function (seat) {
+  //B and E are in the middle
+
+  const middle =
+    seat.slice(-1) === 'B' || seat.slice(-1) === 'E' ? 'is' : 'isnt';
+  console.log(`That seat ${middle} in the middle`);
+};
+
+checkMiddleSeat('11E');
+checkMiddleSeat('31B');
+checkMiddleSeat('22C');
+
+console.log(airLine.toLowerCase()); // chcange to small letters
+console.log(airLine.toUpperCase()); // change to big letters
+
+const passanger = 'sZyMOn';
+
+const correctName = function (string) {
+  const lowerString = string.toLowerCase();
+  const correctString = lowerString[0].toUpperCase() + lowerString.slice(1);
+  return correctString;
+};
+
+console.log(correctName('maGDa'));
+
+// Check email 'Comparing email'
+
+const email = 'szymon@szymon.com';
+const loginEmail = '   sZYmon@sZYmON.COm  \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+/// === loginEmail.toLowerCase -> return string so it is possible to get another string function on it
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+const emailCheck = function (email) {
+  const correctEmail = 'burekszymon@gmail.com';
+  const typedEmail = email.toLowerCase().trim();
+  return typedEmail === correctEmail ? 'Correct email' : 'Wrong email';
+};
+
+//replacing strings:
+const pricePLN = '1056,70PLN';
+const priceCZ = pricePLN.replace('PLN', 'KCZ').replace(',', '.');
+console.log(priceCZ);
+
+const announcement = 'All passangers came to bording door 23. To door 23!';
+
+console.log(announcement.replaceAll('door', 'gate')); //All strings in that string
+
+//Boleans values:
+
+const newPlane = 'Airbus A320neo';
+console.log(newPlane.includes('A320'));
+console.log(newPlane.startsWith('Aib'));
+console.log(newPlane.endsWith('neo'));
+
+if (newPlane.startsWith('Airbus') && newPlane.endsWith('neo'))
+  console.log('That plane is from that familly ');
+
+// Practise - baggage check:
+
+const checkBaggage = function (items) {
+  const checkItems = items.toLowerCase();
+  const forbidenItems = ['gun', 'knife'];
+  return checkItems.includes([forbidenItems])
+    ? console.log('Forbidden')
+    : console.log('Pass');
+};
+
+console.log(checkBaggage('Sads Knife'));
