@@ -701,3 +701,65 @@ const checkBaggage = function (items) {
 };
 
 console.log(checkBaggage('Sads Knife'));
+
+// TODO: Split Method
+
+console.log('This+is+a+very+good+example'.split('+'));
+console.log('Szymon Burek'.split(' '));
+
+const [firstName, lastName] = 'Szymon Burek'.split(' ');
+
+console.log(firstName, lastName);
+
+// Join method:
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' space ');
+console.log(newName);
+
+const capitalization = function (name) {
+  const smallName = name.toLowerCase().split(' ');
+  const upperName = [];
+  for (const word of smallName) {
+    upperName.push(word[0].toUpperCase() + word.slice(1));
+  }
+  return upperName.join(' ');
+};
+
+console.log(capitalization('szymon burek'));
+
+// Padding of string -
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+')); //25 is a length of string
+console.log(message.padEnd(25, '+'));
+
+//
+
+const maskCard = function (number) {
+  const str = number + ''; // when we add string to someting is converted to a string
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCard(33123132233));
+
+// Repeat:
+
+const message2 = 'Bad weather .. all departures Delayed...';
+console.log(message2.repeat(10));
+
+// function friend(friends) {
+//   const newFriends = [];
+//   for (const n of friends) {
+//     if (n.length === 4) newFriends.push(n);
+//   }
+//   return newFriends;
+//   // for (const friendName of friends) {
+//   //   console.log(friendName.length);
+//   //   if (friendName.length === 4) friends.push(friendName);
+//   // }
+//   // return newFriends;
+// }
+
+// const friendArr = ['Ryan', 'Kieran', 'Mark'];
+// console.log(friend(friendArr));
